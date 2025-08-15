@@ -3,18 +3,19 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        long[] even = {4, 6, 8, 10, 12, 14, 16};
+        long[] w = {4, 6, 8, 10, 12, 14, 16};
 
-        System.out.println("even: " + Arrays.toString(even));
+        System.out.println("even: " + Arrays.toString(w));
 
-        double[] random = new double[10];
+
+        double[] x = new double[10];
 
         int min = -2;
         int max = 6;
 
-        for (int i = 0; i < random.length; i++)
-            random[i] = Math.random() * (max - min) + min;
+        for (int i = 0; i < x.length; i++)
+            x[i] = Math.random() * (max - min) + min;
 
-        System.out.println("random: " + Arrays.toString(random));
+        System.out.println("random: " + Arrays.toString(x));
     }
 }
