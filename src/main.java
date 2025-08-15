@@ -1,5 +1,5 @@
 import java.util.Random;
-public class Main {
+class Main {
     public static void main(String[] args) {
         long w[];
         w = new long[(16-4)/2+1];
