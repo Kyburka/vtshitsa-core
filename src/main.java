@@ -15,6 +15,17 @@ class Main {
             return Math.atan(1/Math.pow(Math.E, Math.abs(Math.tan(Math.pow(Math.sin(xj), (4*Math.cos(xj)))))));
         }
     }
+    private static void prnt(double[][] mtx)
+    {
+        for (int i = 0; i<mtx.length; i++)
+        {
+            for (int j =0; j<mtx[i].length; j++)
+            {
+                System.out.printf("%10.4f", mtx[i][j]);
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         long w[];
         w = new long[(16-4)/2+1];
@@ -39,9 +50,8 @@ class Main {
             for (int j = 0; j < b[i].length; j++)
             {
                 b[i][j] = calcul(w[i], x[j]);
-                System.out.printf("%.4f\t", b[i][j]);
             }
-            System.out.println("\n");
         }
+        prnt(b);
     }
 }
