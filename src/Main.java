@@ -1,7 +1,9 @@
+package com.Jifaxin;
+
 import java.util.*;
 
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         long[] w = {4, 6, 8, 10, 12, 14, 16};
 
@@ -25,7 +27,7 @@ class Main {
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 10; j++) {
                 if (w[i] == 14) {
-                    b[i][j] = (Math.pow(Math.atan(((double)x[i] + 2) / 8), 1./3) - 1./3) / Math.exp(Math.tan(x[i]));
+                    b[i][j] = (Math.pow(Math.atan((x[i] + 2) / 8), 1./3) - 1./3) / Math.exp(Math.tan(x[i]));
                 } else if (w[i] == 6 || w[i] == 12 || w[i] == 16) {
                     b[i][j] = Math.pow(1/3/Math.tan(Math.pow(2 * x[i], x[i])), 2);
                 } else {

@@ -1,8 +1,13 @@
+OUTPUT=output.jar
+
 JAVAC=javac
 
-build/%.class: src/%.java
+src/%.java:
 	@mkdir ./build -p
-	$(JAVAC) -d ./build $^
+	$(JAVAC) -d ./build $@
 
-run: build/main.class
-	java -cp build Main
+jar: src/Main.java
+	jar cmf META-INF/MANIFEST.MF build/$(OUTPUT) -C build com
+
+run: jar
+	java -jar build/$(OUTPUT)
