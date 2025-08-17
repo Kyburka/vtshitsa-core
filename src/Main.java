@@ -1,9 +1,13 @@
 import java.util.Random;
 
 class Main {
+    static final int W_LENGTH = 7;
+    static final int X_LENGTH = 10;
+    static final int MAX_RANDOM = 8;
+    static final int MIN_RANDOM = -2;
+    static final int B_ROWS = 7;
+    static final int B_COLS = 10;
     public static void main(String[] args) {
-        final int W_LENGTH = 7;
-        final int X_LENGTH = 10;
         long w[] = new long[W_LENGTH];
         int counter = 0;
         for (int i = 16; i >= 4; i -= 2) {
@@ -12,13 +16,9 @@ class Main {
         }
         double x[] = new double[X_LENGTH];
         Random random = new Random();
-        final int MAX_RANDOM = 8;
-        final int MIN_RANDOM = -2;
         for (int i = 0; i < x.length; i++) {
             x[i] = MAX_RANDOM * random.nextDouble() + MIN_RANDOM; // random.nextDouble() - от 0.0 до 1.0. Умножая на 8, становится от 0.0 до 8.0. Отнимая два, становится от -2.0 до 6.0.
         }
-        final int B_ROWS = 7;
-        final int B_COLS = 10;
         double[][] b = new double[B_ROWS][B_COLS];
         for (int i = 0; i < b.length; i++) {
             for (int j = 0; j < b[i].length; j++) {
@@ -45,7 +45,7 @@ class Main {
             for (int j = 0; j < mtx[i].length; j++) {
                 System.out.printf("%10.4f", mtx[i][j]);
             }
-            System.out.println();
+            //System.out.printf("\n");
         }
     }
 }
