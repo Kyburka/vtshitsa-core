@@ -31,9 +31,11 @@ class Main {
     private static double calculateMatrix(long wi, double xj) {
         if (wi == 14) {
             return (Math.cbrt(Math.atan((xj + 2) / 8)) - (1.0 / 3.0)) / (Math.pow(Math.E, Math.tan(xj)));
-        } else if (wi == 6 || wi == 12 || wi == 16) {
+        }
+        else if (wi == 6 || wi == 12 || wi == 16) {
             return Math.pow(((1.0 / 3.0) / Math.tan(Math.pow(2 * xj, xj))), 2.0);
-        } else {
+        }
+        else {
             return Math.atan(1 / Math.pow(Math.E, Math.abs(Math.tan(Math.pow(Math.sin(xj), (4 * Math.cos(xj)))))));
         }
     }
