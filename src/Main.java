@@ -45,7 +45,7 @@ class Main {
             for (int j = 0; j < mtx[i].length; j++) {
                 System.out.printf("%10.4f", mtx[i][j]);
             }
-            //System.out.printf("\n");
+            System.out.printf("\n");
         }
     }
 }
