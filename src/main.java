@@ -8,11 +8,11 @@ class Main {
         }
         else if (wi == 6 || wi == 12 || wi == 16)
         {
-            return Math.pow(((1.0/3.0)/Math.tan(Math.pow(2*xj,xj))), 2.0);
+            return Math.pow(((1.0 / 3.0) / Math.tan(Math.pow(2 * xj, xj))), 2.0);
         }
         else
         {
-            return Math.atan(1/Math.pow(Math.E, Math.abs(Math.tan(Math.pow(Math.sin(xj), (4*Math.cos(xj)))))));
+            return Math.atan(1 / Math.pow(Math.E, Math.abs(Math.tan(Math.pow(Math.sin(xj), (4 * Math.cos(xj)))))));
         }
     }
     private static void printMatrix(double[][] mtx)
@@ -38,7 +38,7 @@ class Main {
         Random random = new Random();
         for (int i = 0; i < x.length; i++)
         {
-            x[i] = 8 * random.nextDouble()-2; // random.nextDouble() - от 0.0 до 1.0. Умножая на 8, становится от 0.0 до 8.0. Отнимая два, становится от -2.0 до 6.0.
+            x[i] = 8 * random.nextDouble() - 2; // random.nextDouble() - от 0.0 до 1.0. Умножая на 8, становится от 0.0 до 8.0. Отнимая два, становится от -2.0 до 6.0.
         }
         double[][] b = new double[7][10];
         for (int i = 0; i < b.length; i++)
